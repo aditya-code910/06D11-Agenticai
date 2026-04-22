@@ -1,0 +1,6 @@
+flask
+requests
+crewai
+langchain
+langchain-openai
+openai

@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-# 🔴 YOUR KEY
+
 os.environ["OPENAI_API_KEY"] = "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"
 os.environ["OPENAI_BASE_URL"] = "https://openrouter.ai/api/v1"
 
@@ -158,7 +158,7 @@ def generate():
             base_url="https://openrouter.ai/api/v1"
         )
 
-        # -------- Research Agent --------
+       
         research = client.chat.completions.create(
             model="meta-llama/llama-3-8b-instruct",
             messages=[
@@ -180,7 +180,7 @@ def generate():
 
         research_output = research.choices[0].message.content
 
-        # -------- Writer Agent --------
+        
         writer = client.chat.completions.create(
             model="meta-llama/llama-3-8b-instruct",
             messages=[

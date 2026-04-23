@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "OPENROUTER_API_KEY"
 os.environ["OPENAI_BASE_URL"] = "https://openrouter.ai/api/v1"
 
 @app.route("/")
@@ -154,7 +154,7 @@ def generate():
         from openai import OpenAI
 
         client = OpenAI(
-            api_key="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",  # 🔴 YOUR KEY HERE
+            api_key="OPENROUTER_API_KEY",
             base_url="https://openrouter.ai/api/v1"
         )
 
